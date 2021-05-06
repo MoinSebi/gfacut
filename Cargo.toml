@@ -5,6 +5,7 @@ authors = ["moinSebi <s.vorbrugg@googlemail.com>"]
 edition = "2018"
 description = "Cutting out parts of the genome"
 repository = "https://github.com/MoinSebi/gfacut.git"
+license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
