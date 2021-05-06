@@ -1,6 +1,6 @@
 [package]
 name = "gfacut"
-version = "0.1.1"
+version = "0.1.3"
 authors = ["moinSebi <s.vorbrugg@googlemail.com>"]
 edition = "2018"
 description = "Cutting out parts of the genome"

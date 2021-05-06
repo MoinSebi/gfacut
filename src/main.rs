@@ -118,7 +118,7 @@ fn main() {
 
         if checkUnique(&graph, &args[2]){
             let nu = args[3].parse::<usize>().unwrap();
-            let (u, u2) = cutout(&graph, &"40".to_owned(), nu);
+            let (u, u2) = cutout(&graph, &args[2].to_owned(), nu);
             println!("{}\t{}", "H","VN:Z:1.0");
             sortout(&graph, &u, &u2);
         } else{
