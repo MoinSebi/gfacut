@@ -35,7 +35,6 @@ pub fn cutout(graph: &Gfa, node: &String, lens: usize) -> (HashSet<String>, Hash
             //println!("{}", "\n");
             //println!("{}", ind);
             if (ind < lens) & ((ind + lens) > x.nodes.iter().len()){
-                println!("{}", 1);
                 maxx = x.nodes.iter().len();
                 min = 0;
             } else if ind < lens{
