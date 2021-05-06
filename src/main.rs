@@ -107,15 +107,18 @@ pub fn sortout(graph: &Gfa, nodes: &HashSet<String>, fromto: &HashMap<String, (u
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() != 3{
+    if args.len() != 4{
         eprintln!("{}", "ERROR! Not enogh parameters!");
-        eprintln!("{}", "Usage: gfacut path/to/graph.gfa node_id")
+        eprintln!("{}", "Usage: gfacut path/to/graph.gfa node_id distance")
     } else {
         eprintln!("Graph: {:?}", args[1]);
         eprintln!("Node: {}", args[2]);
+        eprintln!("Distance: {}", args[3]);
         let graph = readGFA(&args[1]);
+
         if checkUnique(&graph, &args[2]){
-            let (u, u2) = cutout(&graph, &"40".to_owned(), 100);
+            let nu = args[3].parse::<usize>().unwrap();
+            let (u, u2) = cutout(&graph, &"40".to_owned(), nu);
             println!("{}\t{}", "H","VN:Z:1.0");
             sortout(&graph, &u, &u2);
         } else{
